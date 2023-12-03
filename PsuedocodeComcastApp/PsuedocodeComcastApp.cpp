@@ -52,12 +52,12 @@ void sort(int arr[], int left, int right) {
     merge(arr, left, mid, right);
 }
 
-double sortAndFindMedian(int arr[], int size) {
+int sortAndFindMedian(int arr[], int size) {
     sort(arr, 0, size - 1); // Sorting the array
 
     // Finding the median
     if (size % 2 == 0) {
-        return (arr[size / 2 - 1] + arr[size / 2]) / 2.0;
+        return (arr[size / 2 - 1] + arr[size / 2]) / 2;
     }
     else {
         return arr[size / 2];
@@ -66,8 +66,8 @@ double sortAndFindMedian(int arr[], int size) {
 
 int main() {
     int numbers[] = { 6, 5, 10, 3, 9, 4, 1, 7, 2, 8};
-    double median = sortAndFindMedian(numbers, 10);
-    cout << "The median of \"numbers\": " << median << std::endl;
+    int median = sortAndFindMedian(numbers, 10);
+    cout << "The median of \"numbers\": " << median << endl;
 
     return 0;
 }
